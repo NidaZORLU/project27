@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
 
 //Mixins
 @mixin transitionEffect($par){
@@ -15,11 +15,70 @@
 
 
 //color
-$bg-color-1 :#222;
-$bg-color-2: #fff;
-$bg-color-3: rgba(0, 0, 0, 0.3);
-$bg-color-4:#000;
-$bg-color-5:#c0392b;
-$bg-color-6:  rgba(0, 0, 0, 0.5);
-$bg-color-7:  #555;
+$bg-color-1 :rebeccapurple;
+$bg-color-2: #ffffff;
+$bg-color-3:  #fff;
+$bg-color-4:green;
+$bg-color-5:red;
 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color-1;
+  font-family: 'Poppins', sans-serif;
+  flex-direction: column;
+  @include centerFlex;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.btn {
+  background-color: $bg-color-2;
+  color: $bg-color-1;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+#toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: $bg-color-3;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+}
+
+.toast.info {
+  color: $bg-color-1;
+}
+
+.toast.success {
+  color: $bg-color-4;
+}
+
+.toast.error {
+  color: $bg-color-5;
+}
